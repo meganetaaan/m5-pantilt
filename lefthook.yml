@@ -1,0 +1,10 @@
+pre-commit:
+  parallel: true
+  commands:
+    lint:
+      root: firmware/
+      run: npm run lint -- --staged --no-errors-on-unmatched
+    format:
+      root: firmware/
+      run: npm run format -- --staged --no-errors-on-unmatched
+
