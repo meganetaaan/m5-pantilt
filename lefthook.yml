@@ -3,8 +3,8 @@ pre-commit:
   commands:
     lint:
       root: firmware/
-      run: npm run lint:fix
+      run: npm run lint -- --staged --no-errors-on-unmatched
     format:
       root: firmware/
-      run: npm run format:fix
+      run: npm run format -- --staged --no-errors-on-unmatched
 
