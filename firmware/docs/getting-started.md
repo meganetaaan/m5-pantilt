@@ -14,10 +14,10 @@
 
 ## Clone the repository
 
-Clone this repository with the `--recursive` option.
+Clone this repository.
 
 ```console
-$ git clone --recursive https://github.com/stack-chan/stack-chan.git
+$ git clone https://github.com/stack-chan/stack-chan.git
 $ cd stack-chan/firmware
 $ npm i
 ```
