@@ -1,9 +1,0 @@
-[submodule "firmware/extern/avatar"]
-	path = firmware/extern/avatar
-	url = https://github.com/meganetaaan/moddable-avatar.git
-[submodule "firmware/extern/rs30x"]
-	path = firmware/extern/rs30x
-	url = https://github.com/meganetaaan/moddable-rs30x.git
-[submodule "firmware/extern/scservo"]
-	path = firmware/extern/scservo
-	url = https://github.com/meganetaaan/moddable-scservo.git

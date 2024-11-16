@@ -23,7 +23,6 @@
 - [stackchan](./stackchan/): ファームウェアのソースコードです。
 - [mods](./mods/): MODのソースコードです。
 - [scripts](./scripts/): ｽﾀｯｸﾁｬﾝの音声合成などに用いるスクリプトです。
-- [extern](./extern/): 外部のモジュールです。
 - [typings](./typings/): TypeScriptの型定義ファイル（d.ts）です。
     - ※ｽﾀｯｸﾁｬﾝのファームウェアは一部を除きTypeScriptで実装されているので別途型定義ファイルは必要ありませんが、Moddable SDKの新しめのモジュールは型定義ファイルが提供されていないため、それを補う用途で置いてあります。
 
