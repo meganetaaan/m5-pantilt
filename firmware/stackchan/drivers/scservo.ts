@@ -62,12 +62,11 @@ class PacketHandler extends Serial {
   #state: RxState
   #count: number
   constructor(option) {
-    const onReadable = function (this: PacketHandler, bytes: number) {
+    const onReadable = function (this: PacketHandler, byte: number) {
       const rxBuf = this.#rxBuffer
-      while (bytes > 0) {
+      for (let b = 0; b < byte; b++) {
         // NOTE: We can safely read a number
         rxBuf[this.#idx++] = this.read() as number
-        bytes -= 1
         switch (this.#state) {
           case RX_STATE.SEEK:
             if (this.#idx >= 2) {
@@ -251,10 +250,8 @@ class SCServo {
   async setOffsetAngle(angle: number): Promise<unknown> {
     this.#offset = angle
     const isCcw = angle < 0
-    if (isCcw) {
-      angle *= -1
-    }
-    const value = (Number(isCcw) << 15) | (angle & 0x7fff)
+    const a = isCcw ? angle * -1 : angle
+    const value = (Number(isCcw) << 15) | (a & 0x7fff)
     return this.#sendCommand(COMMAND.WRITE, ADDRESS.OFFSET, ...le(value))
   }
 

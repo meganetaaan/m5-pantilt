@@ -96,13 +96,12 @@ class PacketHandler extends Serial {
   #idx: number
   #state: RxState
   #count = 0
-  constructor(option: any) {
+  constructor(option) {
     const onReadable = function (this: PacketHandler, bytes: number) {
       const rxBuf = this.#rxBuffer
-      while (bytes > 0) {
+      for (let b = 0; b < bytes; b++) {
         // NOTE: We can safely read a number
         rxBuf[this.#idx++] = this.read() as number
-        bytes -= 1
         switch (this.#state) {
           case RX_STATE.SEEK:
             if (this.#idx >= 2) {
@@ -281,7 +280,7 @@ class RS30X {
   }
 
   async setComplianceSlope(rotation: Rotation, angle: number): Promise<void> {
-    const command = rotation == Rotation.CW ? COMMANDS.SET_COMPLIANCE_SLOPE_CW : COMMANDS.SET_COMPLIANCE_SLOPE_CCW
+    const command = rotation === Rotation.CW ? COMMANDS.SET_COMPLIANCE_SLOPE_CW : COMMANDS.SET_COMPLIANCE_SLOPE_CCW
     this.#sendCommand(...command, angle)
   }
 
