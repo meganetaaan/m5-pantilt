@@ -106,9 +106,10 @@ class PacketHandler extends Serial {
               this.#state = RX_STATE.SEEK
             }
             break
-          default:
+          default: {
             // @ts-ignore 6113
             let _state: never
+          }
         }
         // noop
       }
