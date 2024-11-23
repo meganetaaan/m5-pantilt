@@ -143,8 +143,10 @@ class PacketHandler extends Serial {
             }
             break
           default:
-            // @ts-ignore 6113
-            let _state: never
+            {
+              // @ts-ignore 6113
+              let _state: never
+            }
         }
         // noop
       }
