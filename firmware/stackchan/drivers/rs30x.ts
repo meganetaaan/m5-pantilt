@@ -16,7 +16,7 @@ type TORQUE_ON = 1
 type TORQUE_BREAK = 2
 type TorqueMode = TORQUE_OFF | TORQUE_ON | TORQUE_BREAK
 
-export const TorqeMode: { [key: string]: TorqueMode } = Object.freeze({
+export const TorqueMode: { [key: string]: TorqueMode } = Object.freeze({
   OFF: 0,
   ON: 1,
   BREAK: 2,
@@ -294,7 +294,7 @@ class RS30X {
    * @returns TBD
    */
   async setTorque(enable: boolean): Promise<unknown> {
-    const mode = enable ? TorqeMode.ON : TorqeMode.OFF
+    const mode = enable ? TorqueMode.ON : TorqueMode.OFF
     return this.#sendCommand(...COMMANDS.SET_TORQUE, mode)
   }
 
