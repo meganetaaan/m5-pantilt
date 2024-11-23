@@ -281,11 +281,11 @@ class RS30X {
 
   async setComplianceSlope(rotation: Rotation, angle: number): Promise<void> {
     const command = rotation === Rotation.CW ? COMMANDS.SET_COMPLIANCE_SLOPE_CW : COMMANDS.SET_COMPLIANCE_SLOPE_CCW
-    this.#sendCommand(...command, angle)
+    await this.#sendCommand(...command, angle)
   }
 
   async reboot(): Promise<void> {
-    this.#sendCommand(...COMMANDS.REBOOT)
+    await this.#sendCommand(...COMMANDS.REBOOT)
   }
 
   /**
