@@ -23,7 +23,6 @@
 - [stackchan](./stackchan/): Firmware source code.
 - [mods](./mods/): Source code of mods.
 - [scripts](./scripts/): Scripts for Stack-chan's voice synthesis, etc.
-- [extern](./extern/): External modules.
 - [typings](./typings/): TypeScript type definition files (d.ts).
     - Stack-chan firmware is implemented in TypeScript, so no separate type definition files are needed.
 

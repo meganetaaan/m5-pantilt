@@ -3,8 +3,6 @@
     "$(MODDABLE)/examples/manifest_base.json",
     "$(MODDABLE)/examples/manifest_typings.json",
     "$(MODULES)/pins/servo/manifest.json",
-    "../../extern/scservo/src/manifest-driver.json",
-    "../../extern/rs30x/src/manifest-driver.json",
     "../utilities/manifest_utility.json"
   ],
   "modules": {

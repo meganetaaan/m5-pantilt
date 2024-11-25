@@ -14,10 +14,10 @@
 
 ## ｽﾀｯｸﾁｬﾝリポジトリのクローン
 
-`--recursive`オプションをつけて本リポジトリをクローンします。
+本リポジトリをクローンします。
 
 ```console
-$ git clone --recursive https://github.com/stack-chan/stack-chan.git
+$ git clone https://github.com/stack-chan/stack-chan.git
 $ cd stack-chan/firmware
 $ npm i
 ```
