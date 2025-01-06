@@ -4,9 +4,9 @@
 
 ## Prerequisites
 
-* Host PC
-    * Tested on Linux (Ubuntu 20.04)
-* M5Stack Basic
+* Host PC（Windows/Mac/Linux）
+    * Tested with environments below
+        * Linux(Ubuntu24.04)
 * M5Stack（Basic/Core2/CoreS3）
 * USB type-C cable
 * [git](https://git-scm.com/)
