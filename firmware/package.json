@@ -57,7 +57,7 @@
     "typedoc-plugin-markdown": "^4.2.7",
     "typescript": "^5.5.4",
     "web-audio-engine": "^0.13.4",
-    "xs-dev": "^0.32.6",
+    "xs-dev": "^0.36.5",
     "yargs": "^17.6.2"
   }
 }
