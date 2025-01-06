@@ -10,7 +10,7 @@
 * USB type-C cable
 * [git](https://git-scm.com/)
 * [Node.js](https://nodejs.org/en/)
-    * Tested with v16.14.2
+    * Tested with v22
 
 ## Clone the repository
 
@@ -109,14 +109,15 @@ $ npm run doctor
 > xs-dev doctor
 
 xs-dev environment info:
-  CLI Version                0.20.0                                                                
-  OS                         Linux                                                                 
-  Arch                       x64                                                                   
-  NodeJS Version             v16.14.2 (/usr/local/bin/node)                                        
-  Python Version             3.8.10 (/home/sskw/.espressif/python_env/idf4.4_py3.8_env/bin/python) 
-  Moddable SDK Version       3.6.0 (/home/sskw/.local/share/moddable)                              
-  Supported target devices   lin, esp32                                                            
-  ESP32 IDF Directory        /home/sskw/.local/share/esp32/esp-idf                                 
+  CLI Version                0.32.7                                                                 
+  OS                         Linux                                                                  
+  Arch                       x64                                                                    
+  Shell                      /bin/bash                                                              
+  NodeJS Version             v22.9.0 (/home/sskw/.nvm/versions/node/v22.9.0/bin/node)               
+  Python Version             3.12.3 (/home/sskw/.espressif/python_env/idf5.3_py3.12_env/bin/python) 
+  Moddable SDK Version       5.3.3 (/home/sskw/.local/share/moddable)                               
+  Supported target devices   lin, esp32                                                             
+  ESP32 IDF Directory        /home/sskw/.local/share/esp32/esp-idf 
 
 If this is related to an error when using the CLI, please create an issue at "https://github.com/hipsterbrown/xs-dev/issues/new" with the above info.
 ```
