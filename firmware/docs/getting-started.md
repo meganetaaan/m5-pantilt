@@ -7,6 +7,7 @@
 * Host PC
     * Tested on Linux (Ubuntu 20.04)
 * M5Stack Basic
+* M5Stack（Basic/Core2/CoreS3）
 * USB type-C cable
 * [git](https://git-scm.com/)
 * [Node.js](https://nodejs.org/en/)
