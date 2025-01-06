@@ -1,11 +1,25 @@
-FROM meganetaaan/moddable-esp32:3.9.7
-LABEL maintainer "Shinya Ishikawa<ishikawa.s.1027@gmail.com>"
+FROM node:22-slim
 
-RUN curl -SL https://deb.nodesource.com/setup_14.x | bash \
-    && apt-get update \
-    && apt-get install -y --no-install-recommends \
-    nodejs \
-    && apt-get clean \
-    && rm -rf /var/lib/apt/lists/*
-RUN npm install --global typescript
-RUN echo ". /opt/esp/idf/export.sh" >> /root/.bashrc
+RUN npm install -g xs-dev
+
+# 必要なパッケージをインストール
+RUN apt-get update && \
+    apt-get install sudo python3-venv -y && \
+    apt-get clean && \
+    apt-get autoremove
+
+# node ユーザーにパスワードなしの sudo 権限を付与
+RUN echo "node ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers
+
+USER node
+
+# xs-dev をセットアップ
+RUN CI=true xs-dev setup
+RUN . /home/node/.local/share/xs-dev-export.sh && \
+    CI=true xs-dev setup --device=esp32
+
+# 必要な環境変数をロード
+RUN echo ". /home/node/.local/share/xs-dev-export.sh" >> ~/.bashrc
+
+# 作業ディレクトリの設定
+WORKDIR /workspace

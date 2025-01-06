@@ -1,12 +1,14 @@
 #!/bin/bash
+WORKDIR=/workspace
 xhost +local:
 docker run \
     --rm -it \
     --privileged \
-    --mount "type=volume,src=node_modules,dst=/workspace/node_modules" \
-    --mount "type=bind,src=${PWD},dst=/workspace" \
-    -v /dev:/dev \
+    --group-add dialout \
+    --user $(id -u):$(id -g) \
+    --mount "type=bind,src=${PWD},dst=${WORKDIR}" \
     -e DISPLAY=$DISPLAY \
     --net=host \
-    stack-chan/dev
+    stack-chan/dev \
+    bash
 xhost -local:
