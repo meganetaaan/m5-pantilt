@@ -26,7 +26,7 @@
 
 	// Uncomment when using a ptrace-based debugger like C++, Go, and Rust
 	// "runArgs": [ "--cap-add=SYS_PTRACE", "--security-opt", "seccomp=unconfined" ],
-	"runArgs": ["--privileged", "--net=host"],
+	"runArgs": ["--privileged", "--net=host", "--group-add=dialout"],
 
 	"containerEnv": {
 		"DISPLAY": "${localEnv:DISPLAY}"
