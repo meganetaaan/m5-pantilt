@@ -30,7 +30,7 @@ $ npm i
 次の3通りの方法があります。
 
 - CLIを使う（推奨）
-<!-- - Dockerイメージを使う -->
+- Dockerイメージを使う
 - 手動でセットアップする
 
 ### xs-devを使う（推奨）
@@ -45,13 +45,12 @@ $ npm run setup -- --device=esp32
 
 内部で[`xs-dev`](https://github.com/HipsterBrown/xs-dev)を使ってModdableSDKやESP-IDFのセットアップを自動化しています。
 
-<!-- Dockerイメージがメンテされてないため一時的コメントアウトする(https://github.com/stack-chan/stack-chan/issues/239)
 ### Dockerイメージを使う（Linuxのみ）
 
 このリポジトリはDockerfileによるビルド環境を提供しています。
 Dockerコンテナの中でファームウェアのビルド、書き込みとデバッグが可能です。
 
-注意：Linux（Ubuntu20.04）で動作確認しています。Windows（WSL）やMacOSでは、コンテナ側からのデバイスへの接続がうまくいかない[問題](https://github.com/stack-chan/stack-chan/issues/144)が報告されているため、非推奨です。
+注意：Linux（Ubuntu24.04）で動作確認しています。Windows（WSL）やMacOSでは、コンテナ側からのデバイスへの接続がうまくいかない[問題](https://github.com/stack-chan/stack-chan/issues/144)が報告されているため、非推奨です。
 
 #### ターミナルから
 
@@ -72,7 +71,6 @@ VSCodeのDevContainer用設定を同梱しています。
 
 * コマンドパレットを開く(ctrl+shift+p)
 * `>Remote-Containers: Reopen in Container`を実行する
- -->
 
 ### 手動で行う
 
