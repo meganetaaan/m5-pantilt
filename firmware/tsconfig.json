@@ -13,6 +13,7 @@
     "paths": {
       "*": [
         "./node_modules/@moddable/typings/*",
+        "./node_modules/@moddable/typings/ble/*",
         "./typings/*",
         "./stackchan/*",
         "./stackchan/ble/*",
