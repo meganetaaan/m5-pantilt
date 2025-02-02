@@ -30,7 +30,7 @@ Install [ESP-IDF](https://docs.espressif.com/projects/esp-idf/en/latest/esp32/ge
 There are three ways to do this
 
 - Using the CLI (recommended)
-<!-- - Using a Docker image -->
+- Using a Docker image
 - Set up manually
 
 ### Using xs-dev (recommended)
@@ -45,13 +45,12 @@ $ npm run setup -- --device=esp32
 
 The script internally uses [`xs-dev`](https://github.com/HipsterBrown/xs-dev) to automate the setup of ModdableSDK and ESP-IDF.
 
-<!-- 
 ### Using Docker images (for Linux only)
 
 This repository provides a Dockerfile build environment.
 You can build, write and debug firmware inside a Docker container.
 
-Note: This has been tested and confirmed to work on Linux (Ubuntu 20.04). It is not recommended for use on Windows (WSL) or MacOS, as there have been reported [issues](https://github.com/stack-chan/stack-chan/issues/144) with connecting to devices from the container side.
+Note: This has been tested and confirmed to work on Linux (Ubuntu 24.04). It is not recommended for use on Windows (WSL) or MacOS, as there have been reported [issues](https://github.com/stack-chan/stack-chan/issues/144) with connecting to devices from the container side.
 
 #### From terminal
 
@@ -73,8 +72,6 @@ You can open the project in a container with the following commands
 * Open the command palette (ctrl+shift+p)
 * Run `>Remote-Containers: Reopen in Container`
 
- -->
- 
 ### Manual
 
 Follow the instructions on the [official website (English)](https://github.com/Moddable-OpenSource/moddable/blob/public/documentation/Moddable%20SDK%20-%20Getting%20Started.md) to install ModdableSDK and ESP-IDF.

@@ -26,7 +26,7 @@
 
 	// Uncomment when using a ptrace-based debugger like C++, Go, and Rust
 	// "runArgs": [ "--cap-add=SYS_PTRACE", "--security-opt", "seccomp=unconfined" ],
-	"runArgs": ["--privileged", "--net=host"],
+	"runArgs": ["--privileged", "--net=host", "--group-add=dialout"],
 
 	"containerEnv": {
 		"DISPLAY": "${localEnv:DISPLAY}"
@@ -40,5 +40,5 @@
 	],
 
 	// Uncomment to connect as a non-root user if you've added one. See https://aka.ms/vscode-remote/containers/non-root.
-	"remoteUser": "root"
+	"remoteUser": "node"
 }
