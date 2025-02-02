@@ -28,7 +28,7 @@ export type Driver = {
  * The text-to-speech engine
  */
 export type TTS = {
-  stream: (text: string) => Promise<void>
+  stream: (text: string, volume?: number) => Promise<void>
   onPlayed?: (volume: number) => void
   onDone?: () => void
 }
@@ -231,10 +231,10 @@ export class Robot {
    * @param text - the key or speech text itself to say
    * @returns the text when speech finishes, otherwise the reason why it fails.
    */
-  async say(text: string): Promise<Maybe<string>> {
+  async say(text: string, volume?: number): Promise<Maybe<string>> {
     return new Promise((resolve, _reject) => {
       this.#tts
-        .stream(text)
+        .stream(text, volume)
         .catch((reason) => {
           trace('error\n')
           resolve({
@@ -264,8 +264,8 @@ export class Robot {
    * @param duration duration (unit: millisecond)
    * @returns return when the playback of the tone is completed.
    */
-  async tone(hz: number, duration: number): Promise<void> {
-    return this.#tone?.tone(hz, duration)
+  async tone(hz: number, duration: number, volume?: number): Promise<void> {
+    return this.#tone?.tone(hz, duration, volume)
   }
 
   /**

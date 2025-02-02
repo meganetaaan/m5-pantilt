@@ -23,6 +23,7 @@ export type TTSProperty = {
   token: string
   sampleRate?: number
   speakerId?: number
+  volume?: number
 }
 
 export class TTS {
@@ -33,12 +34,14 @@ export class TTS {
   streaming: boolean
   speakerId: number
   sampleRate?: number
+  volume: number
   constructor(props: TTSProperty) {
     this.onPlayed = props.onPlayed
     this.onDone = props.onDone
     this.streaming = false
     this.speakerId = props.speakerId ?? 1
     this.token = props.token
+    this.volume = props.volume ?? 100
   }
 
   async getQuery(text: string, speakerId = 1): Promise<string> {
@@ -58,7 +61,7 @@ export class TTS {
       })
   }
 
-  async stream(key: string): Promise<void> {
+  async stream(key: string, volume?: number): Promise<void> {
     if (this.streaming) {
       throw new Error('already playing')
     }
@@ -73,6 +76,7 @@ export class TTS {
 
     return new Promise((resolve, reject) => {
       this.audio = new AudioOut({ streams: 1, bitsPerSample: 16, sampleRate: this.sampleRate ?? 22050 })
+      this.audio.enqueue(0, AudioOut.Volume, Math.round((volume ?? this.volume) * 256))
       const audio = this.audio
       const streamer = new MP3Streamer({
         http: device.network.https,

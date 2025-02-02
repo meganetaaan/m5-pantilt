@@ -19,6 +19,7 @@ export const PREF_KEYS: readonly [keyof typeof DOMAIN, string, StringConstructor
     [DOMAIN.tts, 'host', String],
     [DOMAIN.tts, 'port', Number],
     [DOMAIN.tts, 'token', String],
+    [DOMAIN.tts, 'volume', Number],
     [DOMAIN.ai, 'token', String],
     [DOMAIN.ai, 'context', String],
   ],
