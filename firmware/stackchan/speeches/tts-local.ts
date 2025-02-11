@@ -24,7 +24,7 @@ export class TTS {
     this.onDone = props.onDone
     this.streaming = false
     this.sampleRate = props.sampleRate ?? 11025
-    this.volume = props.volume ?? 100
+    this.volume = props.volume ?? 0.5
   }
   async stream(key: string, volume?: number): Promise<void> {
     if (this.streaming) {

@@ -41,7 +41,7 @@ export class TTS {
     this.streaming = false
     this.speakerId = props.speakerId ?? 1
     this.token = props.token
-    this.volume = props.volume ?? 100
+    this.volume = props.volume ?? 0.5
   }
 
   async getQuery(text: string, speakerId = 1): Promise<string> {

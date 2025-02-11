@@ -50,7 +50,7 @@ export class TTS {
     this.host = props.host
     this.port = props.port
     this.sampleRate = props.sampleRate ?? 11025
-    this.volume = props.volume ?? 100
+    this.volume = props.volume ?? 0.5
   }
   async getQuery(text: string, speakerId = 1): Promise<void> {
     return new Promise((resolve, reject) => {

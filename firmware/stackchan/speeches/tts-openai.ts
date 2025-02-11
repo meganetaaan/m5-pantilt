@@ -33,7 +33,7 @@ export class TTS {
     this.model = props.model ?? 'tts-1'
     this.voice = props.voice ?? 'alloy'
     this.speed = props.speed ?? 1
-    this.volume = props.volume ?? 100
+    this.volume = props.volume ?? 0.5
   }
   async stream(text: string, volume?: number): Promise<void> {
     if (this.streaming) {
