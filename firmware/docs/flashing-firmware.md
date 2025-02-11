@@ -24,14 +24,15 @@ StackChan can change settings such as motor types and pin assignments from the m
 
 | Key               | Description                                                                | Available values                     |
 | ----------------- | -------------------------------------------------------------------------- | ------------------------------------ |
-| driver.type       | Type of motor driver                                                       | "scservo", "rs30x", "pwm", "none"    |
+| driver.type       | Type of motor driver                                                       | "scservo", "rs30x", "pwm", "none", "dinamixel"    |
 | driver.panId      | ID of the serial servo used for pan axis (horizontal rotation of the neck) | 1~254                                |
 | driver.tiltId     | ID of the serial servo used for tilt axis (vertical rotation of the neck)  | 1~254                                |
 | driver.offsetPan  | Offset of the pan axis                                                     | -90~90                               |
 | driver.offsetTilt | Offset of the tilt axis                                                    | -90~90                               |
-| tts.type          | [TTS](./text-to-speech.md) type                                            | "local", "voicevox"                  |
+| tts.type          | [TTS](./text-to-speech.md) type                                            | "local", "voicevox", "remote", "voicevox-web", "elevenlabs", "openai"                  |
 | tts.host          | Host name when TTS communicates with server                                | "localhost", "ttsserver.local", etc. |
 | tts.port          | Port number when TTS communicates with server                              | 1~65535                              |
+| tts.volume        | Volume when play TTS                                                       | 0~1                                  |
 
 Additionally, you can specify the paths of other manifest files in a list format under the `"include"` key.
 

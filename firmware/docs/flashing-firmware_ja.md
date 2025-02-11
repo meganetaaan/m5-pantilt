@@ -28,14 +28,15 @@
 
 | キー              | 説明                                            | 使用可能な値                                |
 | ----------------- | ----------------------------------------------- | ------------------------------------------- |
-| driver.type       | モータドライバの種類                            | "scservo", "rs30x", "pwm", "none"           |
+| driver.type       | モータドライバの種類                            | "scservo", "rs30x", "pwm", "none", "dinamixel"           |
 | driver.panId      | パン軸（首の横回転）に使うシリアルサーボの ID   | 1~254                                       |
 | driver.tiltId     | チルト軸（首の縦回転）に使うシリアルサーボの ID | 1~254                                       |
 | driver.offsetPan  | パン軸のオフセット                              | -90~90                                      |
 | driver.offsetTilt | チルト軸のオフセット                            | -90~90                                      |
-| tts.type          | [TTS](./text-to-speech_ja.md) の種類            | "local", "voicevox"                         |
+| tts.type          | [TTS](./text-to-speech_ja.md) の種類            | "local", "voicevox", "remote", "voicevox-web", "elevenlabs", "openai"                         |
 | tts.host          | TTS がサーバと通信する場合のホスト名            | "localhost", "ttsserver.local" などの文字列 |
 | tts.port          | TTS がサーバと通信する場合のポート番号          | 1~65535                                     |
+| tts.volume          | TTS を再生する時の音量          | 0~1                                     |
 
 また、`"include"`キーの配下にリスト形式で他のマニフェストファイルのパスを指定できます。
 
